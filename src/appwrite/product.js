@@ -14,6 +14,7 @@ export class Service {
     this.databases = new TablesDB(this.client);
     this.databaseId = DATABASE_ID;
     this.collectionId = menuItemId;
+    this.client.ping();
   }
 
   async listProducts({ limit = 10, offset = 0, search = "" } = {}) {

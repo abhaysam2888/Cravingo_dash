@@ -203,6 +203,9 @@ const Product = () => {
                     </span>
                   </p> */}
 
+                  <p className="text-gray-800 font-semibold text-sm mb-4 line-clamp-2 italic">
+                    {product.restaurantId.name}
+                  </p>
                   <p className="text-gray-500 text-sm mb-4 line-clamp-2 italic">
                     {product.description}
                   </p>

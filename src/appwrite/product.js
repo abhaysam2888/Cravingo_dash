@@ -23,6 +23,7 @@ export class Service {
         Query.orderDesc("$updatedAt"),
         Query.limit(limit),
         Query.offset(offset),
+        Query.select(["*", "restaurantId.name"]),
       ];
 
       if (search.length !== 0) {
@@ -34,6 +35,7 @@ export class Service {
         tableId: this.collectionId,
         queries,
       });
+      console.log(result);
 
       return {
         products: result.rows,
